@@ -31,7 +31,7 @@ function add() {
 	/*
 	Assign a correct carImage variable
 	*/
-	car1ImgTag.src = car1_Image;   // carregue a imagem
+	car1ImgTag.src = car1Image;   // carregue a imagem
 
 	car2ImgTag = new Image(); //definindo uma variável com uma nova imagem
 	car2ImgTag.onload = uploadcar2; // ajustando uma função, onloading essa variável
