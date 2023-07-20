@@ -1,7 +1,5 @@
-canvas = document.getElementById('myCanvas');
-/*
-Corrija o nome da função e uso o context 2d
-*/
+canvas = document.getElementById('MyCanvas');
+
 ctx = canvas.getContext("2d");
 
 car1Width = 120;
@@ -19,42 +17,29 @@ car2Y = 100;
 backgroundImage = "racing.jpg";
 
 function add() {
-	backgroundImgTag = new Image(); //definindo uma variável com uma nova imagem
-	backgroundImgTag.onload = uploadBackground; // ajustando uma função, onloading essa variável
-	backgroundImgTag.src = backgroundImage;   // carregue a imagem
+	backgroundImgTag = new Image();
+	backgroundImgTag.onload = uploadBackground;
+	backgroundImgTag.src = backgroundImage;
 
-	car1ImgTag = new Image(); //definindo uma variável com uma nova imagem
-	/*
-	Upload the correct car
-	*/
-	car1ImgTag.onload = uploadcar1; // ajustando uma função, onloading essa variável
-	/*
-	Assign a correct carImage variable
-	*/
-	car1ImgTag.src = car1Image;   // carregue a imagem
+	car1ImgTag = new Image();
 
-	car2ImgTag = new Image(); //definindo uma variável com uma nova imagem
-	car2ImgTag.onload = uploadcar2; // ajustando uma função, onloading essa variável
-	car2ImgTag.src = car2Image;   // carregue a imagem
+	car1ImgTag.onload = uploadcar1;
+
+	car1ImgTag.src = car1Image;
+
+	car2ImgTag = new Image();
+	car2ImgTag.onload = uploadcar2;
+	car2ImgTag.src = car2Image;
 }
 
 function uploadBackground() {
-	/*
-	Corrija os nomes das funções
-	*/
 	ctx.drawImage(backgroundImgTag, 0, 0, canvas.width, canvas.height);
 }
 
 function uploadcar1() {
-	/*
-	Corrija os nomes das funções
-	*/
 	ctx.drawImage(car1ImgTag, car1X, car1Y, car1Width, car1Height);
 }
 function uploadcar2() {
-	/*
-	Corrija os nomes das funções
-	*/
 	ctx.drawImage(car2ImgTag, car2X, car2Y, car2Width, car2Height);
 }
 
